@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+apply plugin: 'versioning'
+
+android {
+    defaultConfig {
+        applicationId app_id
+        versionCode 1
+        versionName '0.A.1.0'
+    }
+
+    applicationVariants.all {
+        if (it.buildType.name == 'release') {
+            it.outputs.all {
+                versionCodeOverride = appVersion.versionCode
+                versionNameOverride = appVersion.versionName
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation Depend.support.constraint
+}
