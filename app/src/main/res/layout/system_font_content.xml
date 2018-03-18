@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/label_height"
+    android:focusable="true"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="0dp"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="LABEL" />
+
+    <TextView
+        android:id="@android:id/text2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/label_height"
+        android:text="@string/text"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@android:id/text1"
+        app:layout_constraintStart_toEndOf="@android:id/text1"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

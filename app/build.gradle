@@ -8,6 +8,10 @@ android {
         versionName '0.A.1.0'
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     applicationVariants.all {
         if (it.buildType.name == 'release') {
             it.outputs.all {
@@ -19,5 +23,14 @@ android {
 }
 
 dependencies {
+    implementation Depend.arch.lifecycle
+    annotationProcessor Depend.arch.lifecycleCompiler
+    implementation Depend.support.annotations;
     implementation Depend.support.constraint
+    implementation Depend.support.leanback
+    implementation Depend.support.cardview
+    implementation Depend.dagger.dagger
+    annotationProcessor Depend.dagger.compiler
+    implementation Depend.rx.java;
+    implementation Depend.rx.android;
 }

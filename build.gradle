@@ -43,6 +43,11 @@ def setupAndroidPlugin = { isCi, project ->
             targetCompatibility = JavaVersion.VERSION_1_8
         }
     }
+    project.configurations.all {
+        resolutionStrategy {
+            force Depend.support.compatV4
+        }
+    }
 }.curry(System.getenv('CI') == 'true')
 
 subprojects {

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/lb_browse_padding_top"
+    android:paddingBottom="@dimen/lb_browse_padding_bottom"
+    android:clipToPadding="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/default_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="DEFAULT"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/default_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            app:layout_constraintTop_toTopOf="@id/default_label"
+            app:layout_constraintBottom_toBottomOf="@id/default_label"
+            app:layout_constraintStart_toEndOf="@id/default_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif"
+            app:layout_constraintTop_toBottomOf="@id/default_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_thin_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-thin"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_thin_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-thin"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_thin_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_thin_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_thin_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_medium_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-medium"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_thin_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_medium_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_medium_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_medium_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_medium_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_black_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-black"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_medium_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_black_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_black_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_black_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_black_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/arial_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="arial"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_black_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/arial_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="arial"
+            app:layout_constraintTop_toTopOf="@id/arial_label"
+            app:layout_constraintBottom_toBottomOf="@id/arial_label"
+            app:layout_constraintStart_toEndOf="@id/arial_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/helvetica_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="helvetica"
+            app:layout_constraintTop_toBottomOf="@id/arial_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/helvetica_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="helvetica"
+            app:layout_constraintTop_toTopOf="@id/helvetica_label"
+            app:layout_constraintBottom_toBottomOf="@id/helvetica_label"
+            app:layout_constraintStart_toEndOf="@id/helvetica_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tahoma_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="tahoma"
+            app:layout_constraintTop_toBottomOf="@id/helvetica_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tahoma_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="tahoma"
+            app:layout_constraintTop_toTopOf="@id/tahoma_label"
+            app:layout_constraintBottom_toBottomOf="@id/tahoma_label"
+            app:layout_constraintStart_toEndOf="@id/tahoma_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/verdana_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="verdana"
+            app:layout_constraintTop_toBottomOf="@id/tahoma_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/verdana_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="verdana"
+            app:layout_constraintTop_toTopOf="@id/verdana_label"
+            app:layout_constraintBottom_toBottomOf="@id/verdana_label"
+            app:layout_constraintStart_toEndOf="@id/verdana_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_condensed_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-condensed"
+            app:layout_constraintTop_toBottomOf="@id/verdana_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_condensed_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_condensed_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_condensed_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_condensed_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_condensed_light_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-condensed-light"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_condensed_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_condensed_light_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-condensed-light"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_condensed_light_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_condensed_light_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_condensed_light_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/serif_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="serif"
+            app:layout_constraintTop_toBottomOf="@id/sans_serif_condensed_light_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/serif_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="serif"
+            app:layout_constraintTop_toTopOf="@id/serif_label"
+            app:layout_constraintBottom_toBottomOf="@id/serif_label"
+            app:layout_constraintStart_toEndOf="@id/serif_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/times_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="times"
+            app:layout_constraintTop_toBottomOf="@id/serif_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/times_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="times"
+            app:layout_constraintTop_toTopOf="@id/times_label"
+            app:layout_constraintBottom_toBottomOf="@id/times_label"
+            app:layout_constraintStart_toEndOf="@id/times_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/times_new_roman_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="times new roman"
+            app:layout_constraintTop_toBottomOf="@id/times_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/times_new_roman_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="times new roman"
+            app:layout_constraintTop_toTopOf="@id/times_new_roman_label"
+            app:layout_constraintBottom_toBottomOf="@id/times_new_roman_label"
+            app:layout_constraintStart_toEndOf="@id/times_new_roman_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/palatino_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="palatino"
+            app:layout_constraintTop_toBottomOf="@id/times_new_roman_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/palatino_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="palatino"
+            app:layout_constraintTop_toTopOf="@id/palatino_label"
+            app:layout_constraintBottom_toBottomOf="@id/palatino_label"
+            app:layout_constraintStart_toEndOf="@id/palatino_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/georgia_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="georgia"
+            app:layout_constraintTop_toBottomOf="@id/palatino_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/gerorgia_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="georgia"
+            app:layout_constraintTop_toTopOf="@id/georgia_label"
+            app:layout_constraintBottom_toBottomOf="@id/georgia_label"
+            app:layout_constraintStart_toEndOf="@id/georgia_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/baskerville_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="baskerville"
+            app:layout_constraintTop_toBottomOf="@id/gerorgia_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/baskerville_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="baskerville"
+            app:layout_constraintTop_toTopOf="@id/baskerville_label"
+            app:layout_constraintBottom_toBottomOf="@id/baskerville_label"
+            app:layout_constraintStart_toEndOf="@id/baskerville_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/goudy_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="goudy"
+            app:layout_constraintTop_toBottomOf="@id/baskerville_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/goudy_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="goudy"
+            app:layout_constraintTop_toTopOf="@id/goudy_label"
+            app:layout_constraintBottom_toBottomOf="@id/goudy_label"
+            app:layout_constraintStart_toEndOf="@id/goudy_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/fantasy_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="fantasy"
+            app:layout_constraintTop_toBottomOf="@id/goudy_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fantasy_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="fantasy"
+            app:layout_constraintTop_toTopOf="@id/fantasy_label"
+            app:layout_constraintBottom_toBottomOf="@id/fantasy_label"
+            app:layout_constraintStart_toEndOf="@id/fantasy_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/itc_stone_serif_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="ITC Stone Serif"
+            app:layout_constraintTop_toBottomOf="@id/fantasy_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/itc_stone_serif_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="ITC Stone Serif"
+            app:layout_constraintTop_toTopOf="@id/itc_stone_serif_label"
+            app:layout_constraintBottom_toBottomOf="@id/itc_stone_serif_label"
+            app:layout_constraintStart_toEndOf="@id/itc_stone_serif_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/monospace_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="monospace"
+            app:layout_constraintTop_toBottomOf="@id/itc_stone_serif_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/monospace_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="monospace"
+            app:layout_constraintTop_toTopOf="@id/monospace_label"
+            app:layout_constraintBottom_toBottomOf="@id/monospace_label"
+            app:layout_constraintStart_toEndOf="@id/monospace_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/serif_monospace_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="serif-monospace"
+            app:layout_constraintTop_toBottomOf="@id/monospace_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/serif_monospace_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="serif-monospace"
+            app:layout_constraintTop_toTopOf="@id/serif_monospace_label"
+            app:layout_constraintBottom_toBottomOf="@id/serif_monospace_label"
+            app:layout_constraintStart_toEndOf="@id/serif_monospace_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/casual_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="casual"
+            app:layout_constraintTop_toBottomOf="@id/serif_monospace_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/casual_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="casual"
+            app:layout_constraintTop_toTopOf="@id/casual_label"
+            app:layout_constraintBottom_toBottomOf="@id/casual_label"
+            app:layout_constraintStart_toEndOf="@id/casual_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/cursive_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="cursive"
+            app:layout_constraintTop_toBottomOf="@id/casual_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/cursive_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="cursive"
+            app:layout_constraintTop_toTopOf="@id/cursive_label"
+            app:layout_constraintBottom_toBottomOf="@id/cursive_label"
+            app:layout_constraintStart_toEndOf="@id/cursive_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_smallcaps_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="sans-serif-smallcaps"
+            app:layout_constraintTop_toBottomOf="@id/cursive_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sans_serif_smallcaps_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            android:fontFamily="sans-serif-smallcaps"
+            app:layout_constraintTop_toTopOf="@id/sans_serif_smallcaps_label"
+            app:layout_constraintBottom_toBottomOf="@id/sans_serif_smallcaps_label"
+            app:layout_constraintStart_toEndOf="@id/sans_serif_smallcaps_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="jp.tinyport.example.font">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
 
     <application
         android:allowBackup="false"
         android:label="Font App"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material">
+        android:theme="@style/Theme.Leanback"
+        android:name=".core.App"
+        tools:ignore="MissingTvBanner">
         <activity
             android:name=".MainActivity"
             android:label="Font App">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
