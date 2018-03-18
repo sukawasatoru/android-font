@@ -34,10 +34,9 @@ public class SystemFontViewModel extends BaseObservable implements LifecycleObse
         mDisposables.add(Single.just(new File("/system/fonts"))
                 .flatMapObservable(data -> Observable.fromArray(data.listFiles()))
                 .map(data -> new Pair<>(data.getName(), Typeface.createFromFile(data)))
-                .toList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(mAdapter::set));
+                .subscribe(mAdapter::add));
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)

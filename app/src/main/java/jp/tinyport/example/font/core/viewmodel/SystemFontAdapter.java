@@ -56,6 +56,11 @@ class SystemFontAdapter extends RecyclerView.Adapter<SystemFontAdapter.FontViewH
         return mList.size();
     }
 
+    void add(Pair<String, Typeface> data) {
+        mList.add(data);
+        notifyItemInserted(mList.size());
+    }
+
     void set(List<Pair<String, Typeface>> list) {
         mList.clear();
         mList.addAll(list);
