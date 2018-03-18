@@ -21,21 +21,27 @@ import javax.inject.Inject;
 
 import jp.tinyport.example.font.BR;
 import jp.tinyport.example.font.R;
+import jp.tinyport.example.font.databinding.DownloadableFontBinding;
 import jp.tinyport.example.font.databinding.SystemFontBinding;
 
 public class MainViewModel extends BaseObservable implements LifecycleObserver, LifecycleOwner {
     private final Activity mActivity;
     private final LifecycleRegistry mLifecycleRegistry;
     private final SystemFontViewModel mSystemFontViewModel;
+    private final DownloadableFontViewModel mDownloadableFontViewModel;
 
     private MenuAdapter mAdapter;
 
     @Inject
-    MainViewModel(Activity activity, SystemFontViewModel systemFontViewModel) {
+    MainViewModel(
+            Activity activity, SystemFontViewModel systemFontViewModel,
+            DownloadableFontViewModel downloadableFontViewModel) {
         mActivity = activity;
         mSystemFontViewModel = systemFontViewModel;
+        mDownloadableFontViewModel = downloadableFontViewModel;
         mLifecycleRegistry = new LifecycleRegistry(this);
         mLifecycleRegistry.addObserver(systemFontViewModel);
+        mLifecycleRegistry.addObserver(downloadableFontViewModel);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -45,7 +51,8 @@ public class MainViewModel extends BaseObservable implements LifecycleObserver, 
         mAdapter = new MenuAdapter(Arrays.asList(
                 new Pair<>("FontFamily", createFontFamilyScene(mainContentView)),
                 new Pair<>("System Font", createSystemFontScene(mainContentView)),
-                new Pair<>("Bundled Font", createBundledFontScene(mainContentView))));
+                new Pair<>("Bundled Font", createBundledFontScene(mainContentView)),
+                new Pair<>("Downloadable Font", createDownloadableFont(mainContentView))));
         notifyPropertyChanged(BR.adapter);
 
         // for workaround.
@@ -106,5 +113,12 @@ public class MainViewModel extends BaseObservable implements LifecycleObserver, 
     private Scene createBundledFontScene(ViewGroup sceneRoot) {
         return new Scene(sceneRoot, mActivity.getLayoutInflater()
                 .inflate(R.layout.bundled_font, sceneRoot, false));
+    }
+
+    private Scene createDownloadableFont(ViewGroup sceneRoot) {
+        final DownloadableFontBinding binding = DownloadableFontBinding.inflate(
+                mActivity.getLayoutInflater(), sceneRoot, false);
+        binding.setVm(mDownloadableFontViewModel);
+        return new Scene(sceneRoot, binding.getRoot());
     }
 }

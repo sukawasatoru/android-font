@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="jp.tinyport.example.font.core.viewmodel.DownloadableFontViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/lb_browse_padding_top"
+        android:paddingBottom="@dimen/lb_browse_padding_bottom">
+
+
+        <TextView
+            android:id="@+id/default_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="DEFAULT"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/default_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text"
+            app:layout_constraintTop_toTopOf="@id/default_label"
+            app:layout_constraintBottom_toBottomOf="@id/default_label"
+            app:layout_constraintStart_toEndOf="@id/default_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/download_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/label_height"
+            android:text="download"
+            app:layout_constraintTop_toBottomOf="@id/default_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/download_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="inconsolata"
+            android:text="@string/text"
+            app:layout_constraintBottom_toBottomOf="@id/download_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/download_label"
+            app:layout_constraintTop_toTopOf="@id/download_label" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

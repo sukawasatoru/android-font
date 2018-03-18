@@ -29,6 +29,7 @@ dependencies {
     implementation Depend.support.constraint
     implementation Depend.support.leanback
     implementation Depend.support.cardview
+    implementation Depend.support.compat
     implementation Depend.dagger.dagger
     annotationProcessor Depend.dagger.compiler
     implementation Depend.rx.java;
