@@ -44,7 +44,8 @@ public class MainViewModel extends BaseObservable implements LifecycleObserver, 
 
         mAdapter = new MenuAdapter(Arrays.asList(
                 new Pair<>("FontFamily", createFontFamilyScene(mainContentView)),
-                new Pair<>("System Font", createSystemFontScene(mainContentView))));
+                new Pair<>("System Font", createSystemFontScene(mainContentView)),
+                new Pair<>("Bundled Font", createBundledFontScene(mainContentView))));
         notifyPropertyChanged(BR.adapter);
 
         // for workaround.
@@ -100,5 +101,10 @@ public class MainViewModel extends BaseObservable implements LifecycleObserver, 
         binding.setVm(mSystemFontViewModel);
         binding.fontList.setFocusable(false);
         return new Scene(sceneRoot, binding.getRoot());
+    }
+
+    private Scene createBundledFontScene(ViewGroup sceneRoot) {
+        return new Scene(sceneRoot, mActivity.getLayoutInflater()
+                .inflate(R.layout.bundled_font, sceneRoot, false));
     }
 }
